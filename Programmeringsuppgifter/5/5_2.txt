@@ -1,0 +1,17 @@
+﻿Skriv en pseudokod som läser in ett antal tal och kontrollerar om talen skrivits in i storleksordning eller inte.
+
+
+
+
+1. Läs in ett antal tal i variabeln “tal”
+2. Skapa variabel nyttnummer, i,  och ordning
+3. Sätt ordning till TRUE
+4. Så länge som i är mindre än tal gör följande iteration
+   1. Sätt nummer till 0
+   2. Läs in ett tal i nyttnummer
+   3. Om nyttnummer > nummer 
+      1. Sätt nummer till nyttnummer
+   1. Annars  sätt ordning till false
+1. Om ordning == TRUE
+   1. Skriv ut “Allt är i sin ordning”
+1. Annars skriv ut “Ej i ordning”

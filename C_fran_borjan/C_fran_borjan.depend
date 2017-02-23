@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1483738904 source:/Users/asplund/GoogleDrive/Kodning/C/C_fran_barjan/cmapp/C_fran_borjan/3_4.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1483738918 source:/Users/asplund/GoogleDrive/Kodning/C/C_fran_barjan/cmapp/C_fran_borjan/3_5.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1483745525 source:/Users/asplund/GoogleDrive/Kodning/C/C_fran_barjan/cmapp/C_fran_borjan/4_1.c
+	<stdio.h>
+

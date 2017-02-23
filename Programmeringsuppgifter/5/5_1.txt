@@ -1,0 +1,11 @@
+﻿Beskriv i pseudokod en algoritm som läser in 100 tal och som beräknar och skriver ut medelvärdet av de inlästa talen.
+
+
+
+
+* Använd två variabler “antal” och “medel” som sätts till 0 och en räknare “i” som sätts till 1.
+* Upprepa följande så länge som “i” är mindre eller lika med 100.
+   * Läs in ett värde till “antal”
+   * Sätt variabel “medel” till “medel” plus “antal” 
+* Sätt variabel “medel” till “medel” delat på två.
+* Skriv ut “medel”.
