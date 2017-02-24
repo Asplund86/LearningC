@@ -61,7 +61,7 @@ int main()
 		{
 			for(int j = 0; j < COLS; j++)
 			{
-				int random = ( rand() % 6) + 1;
+				int random = ( rand() % 6) + 1; // Styrs från rad 53 srand(time(0)); 
 				magisk_array[i][j] = random;
 			}
 		}
