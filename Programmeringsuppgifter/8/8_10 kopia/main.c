@@ -53,7 +53,7 @@ int main()
 	srand(time(0));
 
 
-	// I while-loopen ger vi varje element ett random nummer 
+	// I while-loopen ger vi varje element ett slumpat nummer 
 	// tills magisk funktionen är true.
 	while(1)
 	{	
