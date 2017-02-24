@@ -49,12 +49,14 @@ int main()
 	int sum_kolumner = 0;
 	int sum_kolumner_compare = 0;
 	int magisk_array[COLS][COLS];
+	long int counter = 0;
+	srand(time(0));
+
 
 	// I while-loopen ger vi varje element ett random nummer 
 	// tills magisk funktionen är true.
-
 	while(1)
-	{
+	{	
 		for(int i = 0; i < COLS; i++)
 		{
 			for(int j = 0; j < COLS; j++)
@@ -63,6 +65,9 @@ int main()
 				magisk_array[i][j] = random;
 			}
 		}
+
+		counter++; 
+
 		if(magisk(magisk_array, COLS))
 			break;
 
@@ -70,6 +75,7 @@ int main()
 
 	//Här skriver vi ut array.
 
+	printf("While-loopen körde %ld gånger innan den hittade rätt.\n", counter);
 
 	for(int i = 0; i < COLS; i++)
 	{
