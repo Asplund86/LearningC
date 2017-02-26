@@ -9,7 +9,7 @@
 int main() {
   setlocale(LC_ALL, "");
   printf("Skriv ett tecken: ");
-  int teck = getwchar();
+  wchar_t teck = getwchar();
   if (isdigit(teck))
     printf("Det är en siffra\n"); 
   if (iswlower(teck)) {
@@ -18,11 +18,6 @@ int main() {
            towupper(teck));
   }
 
-/*  printf("%d\n", teck);
 
 
-  wchar_t i = 'Ä';
-
-  printf("%lc", i);
-*/
 }
