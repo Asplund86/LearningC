@@ -1,24 +1,28 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <locale.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <stddef.h>
 
 
 int main() {
   setlocale(LC_ALL, "");
   printf("Skriv ett tecken: ");
-  char teck = getchar();
+  int teck = getwchar();
   if (isdigit(teck))
-    printf("Det ÃÂ¤r en siffra\n"); 
-  if (islower(teck)) {
+    printf("Det är en siffra\n"); 
+  if (iswlower(teck)) {
     printf("Det är en liten bokstav\n");
-    printf("Motsvarande stora bokstav är: %c\n",
-           toupper(teck));
+    printf("Motsvarande stora bokstav är: %lc\n",
+           towupper(teck));
   }
 
-  printf("%c\n", teck);
+/*  printf("%d\n", teck);
 
 
-  char i[] = "Ä";
+  wchar_t i = 'Ä';
 
-  printf("%s", i);
+  printf("%lc", i);
+*/
 }
