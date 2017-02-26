@@ -6,9 +6,8 @@ int main(){
 
     setlocale(LC_ALL, "");
     
-    wchar_t i = L'Ä';
+    wchar_t i = L'Ã';
 
     printf("%lc\n", i);
-    
 
 }
