@@ -17,7 +17,7 @@ int main(){
     setlocale(LC_ALL, "");
     
 
-    wchar_t string[100] = L"Hejsan på dig!";
+    wchar_t string[] = L"Hejsan på dig!";
     wchar_t a;
 
     printf("Vilken bokstavs index i \"%ls\" vill du veta?", string);
