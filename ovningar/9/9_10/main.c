@@ -17,6 +17,7 @@ void remove_white(wchar_t *to, constant wchar_t *from){
     }
 
     if(j >= i){
-        strcpy()
+        strcpy(to, from+i, j-i+1);
     }
+    to[j+1] = '\0';
 }
