@@ -4,7 +4,7 @@
 #include <wchar.h>
 
 
-void remove_white(wchar_t *to, const wchar_t *from){
+/*void remove_white(wchar_t *to, const wchar_t *from){
     
     int i = 0; int j = wcslen(from)-1;//Initierar räknare.
     
@@ -17,10 +17,22 @@ void remove_white(wchar_t *to, const wchar_t *from){
     }
 
     if(j >= i){ // En if sats som bara skriver om j är större än i.
-        wcsncpy(to, from+i, j-i+1); // kopierar alla tecken till to. Utan vita tecken.
+        wcpncpy(to, from+i, j-i+1); // kopierar alla tecken till to. Utan vita tecken.
     }
     to[j+1] = '\0'; // Lägger till ett nolltecken på slutet.
 }
+*/
+
+void remove_white(wchar_t *to, const wchar_t *from){
+    int j = 0;
+    for(int i = 0; from[i] != '\0'; i++){
+        if(!iswspace(from[i]))
+            to[j++] = from[i];
+    
+    }
+    to[j] = '\0'; 
+}
+
 
 int main(){
     wchar_t djur[20];
