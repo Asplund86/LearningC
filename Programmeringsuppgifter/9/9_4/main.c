@@ -61,8 +61,6 @@ _Bool anagram(wchar_t *check, wchar_t *from){
   // Kontrollera att arrays är lika långa.
   if(wcslen(check) != wcslen(from))
     return 0;
-
-
 // Kör nästlad for loops där man först går igenom
 // om tecknet i check finns i from. Finns det i from så sätts temp till 1, annars
 // returneras 0. Finns tecknet i båda så kollar den med charCount om tecknet Finns
@@ -79,9 +77,7 @@ _Bool anagram(wchar_t *check, wchar_t *from){
    if(!temp)
       return 0;
   }
-
   return 1;
-
 }
 
 
@@ -106,6 +102,6 @@ int main(){
   //Testar anagram
   printf("%d\n", anagram(one, two));
 
-
+  printf("%ls", one);
 
 }
