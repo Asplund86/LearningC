@@ -44,3 +44,47 @@ _Bool fget_line(wchar_t *a, int n, FILE *f){
 _Bool get_line(wchar_t *a, int n){
   return fget_line(a, n, stdin);
 }
+
+//
+
+FILE *read_file(const wchar_t *commit){
+  wchar_t name[100];
+  printf("%ls", commit);
+  fget_line(name, 100);
+  FILE *f = fopen(name, "r");
+  if(f == NULL){
+    printf("Filen \" %ls \" kunde inte öppnas.\n", name);
+    exit(1);
+  }
+  return f;
+}
+
+//
+
+FILE *writeto_file(const wchar_t *commit){
+  wchar_t name[100];
+  printf("%ls", commit);
+  get_line(name, 100);
+  FILE *f = fopen(name, "w");
+  if(f == NULL){
+    printf("Filen \" %ls \" kunde inte öppnas.\n", name);
+    exit(1);
+  }
+  return f;
+}
+
+//
+
+FILE *appendto_file(const wchar_t *commit){
+  wchar_t name[100];
+  printf("%ls", commit);
+  get_line(name, 100);
+  FILE *f = fopen(name, "a");
+  if(f == NULL){
+    printf("Filen \" %ls \" kunde inte öppnas.\n", name);
+    exit(1);
+  }
+  return f;
+}
+
+//
