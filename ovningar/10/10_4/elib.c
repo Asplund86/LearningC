@@ -5,6 +5,14 @@
 #include <locale.h>
 #include <string.h>
 
+void towlower_string(wchar_t *to, wchar_t *from){
+  int i = 0;
+  for(; i <= wcslen(from); i++){
+    to[i] = towlower(from[i]);
+  }
+  to[i] = '\0';
+}
+
 void fskip_line(FILE *f){
   int c;
   while( (c = fgetwc(f)) != '\n' && c != EOF){

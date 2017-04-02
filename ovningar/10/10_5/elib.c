@@ -5,7 +5,25 @@
 #include <locale.h>
 #include <string.h>
 
-void towlower_string(wchar_t *to, wchar_t *from){
+void trim(wchar_t *to, const wchar_t *from){
+  int i = 0;
+  int j = wcslen(from)-1;
+
+  while(iswspace(from[i])){
+    i++;
+  }
+
+  while(j >= 0 && iswspace(from[j])){
+    j--;
+  }
+
+  if(j>=i)
+    wcsncpy(to, from+i, j-i+1);
+  to[j+1] = '\0';
+
+}
+
+void towlower_string(wchar_t *to, const wchar_t *from){
   int i = 0;
   for(; i <= wcslen(from); i++){
     to[i] = towlower(from[i]);
