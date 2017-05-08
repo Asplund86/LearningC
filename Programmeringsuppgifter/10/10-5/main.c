@@ -34,14 +34,44 @@ int main() {
   //Open target file.
   char targetName[N];
   printf("Save to: ");
-  scanf("%s" targetName);
+  scanf("%s", targetName);
   if(targetName[strlen(targetName - 1)] == '\n')
     targetName[strlen(targetName - 1)] == '\0';
 
+
   //Open target stream.
-  FILE *target = fopen[targetName, "w"];
+  FILE *target = fopen(targetName, "w");
   if(target == NULL){
     printf("File error");
     exit(1);
   }
+
+  //Get the search string.
+  char searchString[N];
+  printf("Search: ");
+  scanf("%s", searchString);
+  if(searchString[strlen(searchString - 1)] == '\n')
+    searchString[strlen(searchString - 1)] == '\0';
+
+  //Search the source for search string.
+  char line[N];
+  int hitCount;
+  while(fgets(line, N, source)){
+
+    for(int i; i < strlen(line); i++){
+      line[i] = tolower(line[i])
+    }
+
+    for()
+
+    if(strstr(line, searchString)){
+      fprintf(target, "%s", line);
+      hitCount = hitCount + 1;
+    }
+
+  }
+  fclose(source);
+  fclose(target);
+  printf("Found %d hits , wrote lines to %s.\n", hitCount, targetName);
+  return 0;
 }
