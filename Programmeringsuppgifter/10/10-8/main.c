@@ -39,4 +39,6 @@ int main(){
     else
       printf("%s", line);
   }
+  fclose(source);
+  return 0;
 }
