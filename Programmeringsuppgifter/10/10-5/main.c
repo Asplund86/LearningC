@@ -59,10 +59,8 @@ int main() {
   while(fgets(line, N, source)){
 
     for(int i; i < strlen(line); i++){
-      line[i] = tolower(line[i])
+      line[i] = tolower(line[i]);
     }
-
-    for()
 
     if(strstr(line, searchString)){
       fprintf(target, "%s", line);

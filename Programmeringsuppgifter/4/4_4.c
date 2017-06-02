@@ -12,7 +12,7 @@ int main() {
   scanf("%d", &max);
 
   int rader;
-  for (int i = 0; int < max; i++){
+  for (int i = 0; i < max; i++){
 
 
   }
